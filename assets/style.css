@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+/* ============================================================
+   Desk pricer theme
+   bg #0a0d12 | panel #10141b | border #222837
+   accent amber #f0a93b | blue #5aa2ff | green #2fd585 | red #ff5d6c
+   ============================================================ */
+
+html, body, [class*="css"] {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.block-container {
+    padding-top: 1.6rem;
+    padding-bottom: 2rem;
+}
+
+/* ---------- Header ---------- */
+.desk-header {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    margin-bottom: 2px;
+}
+
+.desk-title {
+    font-size: 1.45rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    color: #dce3ee;
+}
+
+.desk-title .accent {
+    color: #f0a93b;
+}
+
+.desk-badge {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.62rem;
+    color: #7d8898;
+    border: 1px solid #222837;
+    border-radius: 4px;
+    padding: 2px 8px;
+    letter-spacing: 0.08em;
+}
+
+.desk-sub {
+    color: #7d8898;
+    font-size: 0.82rem;
+    margin-bottom: 1.1rem;
+}
+
+/* ---------- Section headers ---------- */
+.section-header {
+    color: #f0a93b;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    font-weight: 600;
+    margin: 0.2rem 0 0.7rem 0;
+    padding-bottom: 0.35rem;
+    border-bottom: 1px solid #222837;
+}
+
+.section-header.blue { color: #5aa2ff; }
+
+/* ---------- Numbers: always tabular monospace ---------- */
+[data-testid="stMetricValue"], code,
+[data-testid="stNumberInput"] input,
+[data-testid="stDataFrame"] {
+    font-family: 'JetBrains Mono', ui-monospace, monospace !important;
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: "tnum";
+}
+
+/* ---------- Metric cards ---------- */
+[data-testid="stMetric"] {
+    background: #10141b;
+    border: 1px solid #222837;
+    border-top: 2px solid #2c3445;
+    padding: 12px 14px;
+    border-radius: 8px;
+    transition: border-color 0.15s;
+}
+
+[data-testid="stMetric"]:hover {
+    border-color: #f0a93b;
+    border-top-color: #f0a93b;
+}
+
+[data-testid="stMetricLabel"] {
+    color: #7d8898 !important;
+    font-size: 0.66rem !important;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+[data-testid="stMetricValue"] {
+    font-size: 1.18rem !important;
+    font-weight: 500 !important;
+    color: #dce3ee !important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* ---------- Leg cards ---------- */
+.leg-card {
+    background: #10141b;
+    border: 1px solid #222837;
+    border-left: 3px solid #2fd585;
+    padding: 9px 13px;
+    border-radius: 6px;
+    margin-bottom: 6px;
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 0.8rem;
+    color: #c9d2e0;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.leg-card .leg-tag {
+    font-size: 0.62rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    color: #2fd585;
+    white-space: nowrap;
+}
+
+.leg-card.short { border-left-color: #ff5d6c; }
+.leg-card.short .leg-tag { color: #ff5d6c; }
+
+/* ---------- Solved coupon banner ---------- */
+.solve-banner {
+    background: linear-gradient(90deg, rgba(240, 169, 59, 0.12) 0%, rgba(240, 169, 59, 0.03) 100%);
+    border: 1px solid rgba(240, 169, 59, 0.45);
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin: 4px 0 10px 0;
+    font-size: 0.88rem;
+    color: #dce3ee;
+}
+
+.solve-banner .big {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #f0a93b;
+}
+
+/* ---------- Buttons ---------- */
+.stButton > button {
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    border: 1px solid #2c3445;
+    transition: all 0.15s;
+}
+
+.stButton > button:hover {
+    border-color: #f0a93b;
+    color: #f0a93b;
+}
+
+.stButton > button[kind="primary"] {
+    background: #f0a93b;
+    color: #0a0d12;
+    border: none;
+}
+
+.stButton > button[kind="primary"]:hover {
+    background: #ffc266;
+    color: #0a0d12;
+}
+
+/* ---------- Tabs ---------- */
+.stTabs [data-baseweb="tab-list"] {
+    gap: 2px;
+    background: #10141b;
+    padding: 3px;
+    border-radius: 8px;
+    border: 1px solid #222837;
+}
+
+.stTabs [data-baseweb="tab"] {
+    border-radius: 6px;
+    padding: 7px 16px;
+    color: #7d8898;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.stTabs [aria-selected="true"] {
+    background: #222837 !important;
+    color: #f0a93b !important;
+}
+
+/* ---------- Sidebar ---------- */
+[data-testid="stSidebar"] {
+    background: #07090d;
+    border-right: 1px solid #1a1f2a;
+}
+
+[data-testid="stSidebar"] .stRadio label {
+    font-size: 0.88rem;
+}
+
+/* ---------- Preset / info cards ---------- */
+.preset-desc {
+    background: #10141b;
+    border-left: 3px solid #5aa2ff;
+    padding: 10px 13px;
+    border-radius: 6px;
+    color: #a8b3c4;
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    line-height: 1.5;
+}
+
+/* ---------- Term sheet ---------- */
+.ts-doc {
+    background: #10141b;
+    border: 1px solid #222837;
+    border-radius: 10px;
+    padding: 26px 30px;
+    font-size: 0.86rem;
+    color: #c9d2e0;
+    line-height: 1.55;
+}
+
+.ts-doc h2 {
+    font-size: 1.05rem;
+    letter-spacing: 0.1em;
+    color: #dce3ee;
+    border-bottom: 2px solid #f0a93b;
+    padding-bottom: 8px;
+    margin: 0 0 4px 0;
+}
+
+.ts-doc .ts-sub {
+    color: #7d8898;
+    font-size: 0.74rem;
+    margin-bottom: 18px;
+    letter-spacing: 0.04em;
+}
+
+.ts-doc h3 {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: #f0a93b;
+    margin: 20px 0 8px 0;
+}
+
+.ts-doc table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.8rem;
+}
+
+.ts-doc td, .ts-doc th {
+    border: 1px solid #222837;
+    padding: 6px 10px;
+    text-align: left;
+}
+
+.ts-doc th {
+    background: #161b25;
+    color: #7d8898;
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.ts-doc td.k {
+    color: #7d8898;
+    width: 38%;
+}
+
+.ts-doc td.v {
+    font-family: 'JetBrains Mono', monospace;
+    color: #dce3ee;
+}
+
+.ts-doc .num {
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.ts-doc .disclaimer {
+    margin-top: 18px;
+    padding-top: 12px;
+    border-top: 1px solid #222837;
+    color: #7d8898;
+    font-size: 0.7rem;
+    font-style: italic;
+}
+
+/* ---------- Misc ---------- */
+[data-testid="stDataFrame"] {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+hr {
+    margin: 0.9rem 0;
+    border-color: #1a1f2a;
+}
+
+.stAlert { border-radius: 8px; }
+
+#MainMenu { visibility: hidden; }
+footer { visibility: hidden; }
