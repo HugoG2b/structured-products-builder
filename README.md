@@ -5,6 +5,18 @@ Interactive pricing & analytics workbench for structured products, built with Py
 - **Brick Builder** — compose payoffs from primitive legs (bonds, vanilla options, digitals, barrier options) and analyze them in real time: payoff diagrams, Black-Scholes / Monte Carlo pricing, Greeks, spot × vol heatmaps.
 - **Autocall Pricer** — full pricing and risk workspace for **Athena** and **Phoenix** autocallable notes: fair-coupon solver, outcome-colored Monte Carlo paths, redemption probabilities, P&L distribution with VaR, and an auto-generated term sheet.
 
+## Screenshots
+
+**Autocall Pricer** — outcome-colored Monte Carlo paths and closed-form fair-coupon solver:
+
+![Autocall simulation](docs/autocall-simulation.png)
+
+![Autocall pricing and Greeks](docs/autocall-pricing.png)
+
+**Brick Builder** — composing a Bonus Certificate from primitive legs:
+
+![Brick Builder payoff](docs/brick-builder-payoff.png)
+
 Built as a learning tool — not a production pricer. Assumes flat volatility, GBM dynamics, no dividends, no repo, no credit/funding spread.
 
 ---
